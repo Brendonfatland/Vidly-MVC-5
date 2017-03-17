@@ -10,14 +10,14 @@ namespace Vidly.Controllers
 {
     public class CustomersController : Controller
     {
-        // GET: Customers
-        [Route("customers/index")]
-        public ActionResult Index()
+        
+        public ActionResult CustomersView()
         {
 
             var customers = new List<Customer>
             {
-                new Customer { Name = "First one" }
+                new Customer { Name = "First One" },
+                new Customer { Name = "Second One" }
             };
 
             var viewModel = new CustomerViewModel

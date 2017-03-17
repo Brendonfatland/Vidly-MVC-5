@@ -3,17 +3,26 @@
     ViewBag.Title = "CustomersView";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+@*This allows you to create a dynamic class property. This would making styling fun and the website more dynamic. *@
+@{ 
+    var dynamicClass = Model.Customers.Count > 0 ? "newDynamicClassName" : null;
+}
 
-<h2>@Model.Customers</h2>
-
-<ul>
+@**@
+<h2 class="@dynamicClass"> There are @Model.Customers.Count customers in our current ViewModel. </h2>
+@if (Model.Customers.Count == 0)
+{
+    <p>There are no customers!</p>
+}
+else
+{
+    <ul>
         @foreach (var customer in Model.Customers)
         {
-            
             <li>@customer.Name</li>
+        }
+    </ul>
+}
 
-   
-    }
-</ul>
 
 
