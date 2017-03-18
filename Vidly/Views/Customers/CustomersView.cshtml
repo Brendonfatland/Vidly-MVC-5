@@ -1,16 +1,16 @@
-﻿@model Vidly.ViewModels.CustomerViewModel
+﻿@model IEnumerable<Vidly.Models.Customer>
 @{
     ViewBag.Title = "CustomersView";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 @*This allows you to create a dynamic class property. This would making styling fun and the website more dynamic. *@
 @{
-    var dynamicClass = Model.Customers.Count > 0 ? "newDynamicClassName" : null;
+   @*var dynamicClass =  > 0 ? "newDynamicClassName" : null;*@
 }
 
 @**@
-<h2 class="@dynamicClass"> There are @Model.Customers.Count customers in our current ViewModel. </h2>
-@if (Model.Customers.Count == 0)
+<h2 @*class="@dynamicClass">*@ > Customers </h2>
+@if (Model.Equals(1))
 {
     <p>There are no customers!</p>
 }
@@ -20,13 +20,15 @@ else
         <thead>
             <tr>
                 <th>Customer</th>
+                <th>Membership Type</th>
             </tr>
         </thead>
         <tbody>
-              @foreach (var customer in Model.Customers)
+              @foreach (var customer in Model)
               {
                 <tr>
                     <td> @Html.ActionLink(customer.Name, "Details", "Customers", new { id = customer.Id }, null) </td>
+                    @*<td>@customer.MembershipType.Name</td>*@
                 </tr>
               }
         </tbody>
