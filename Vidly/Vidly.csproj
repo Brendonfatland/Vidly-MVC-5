@@ -236,6 +236,10 @@
     <Compile Include="Migrations\201703181448573_MebershipTypeNameNonNullable.Designer.cs">
       <DependentUpon>201703181448573_MebershipTypeNameNonNullable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201703181602452_AddDOBToCustomer.cs" />
+    <Compile Include="Migrations\201703181602452_AddDOBToCustomer.Designer.cs">
+      <DependentUpon>201703181602452_AddDOBToCustomer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -348,6 +352,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201703181448573_MebershipTypeNameNonNullable.resx">
       <DependentUpon>201703181448573_MebershipTypeNameNonNullable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703181602452_AddDOBToCustomer.resx">
+      <DependentUpon>201703181602452_AddDOBToCustomer.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
