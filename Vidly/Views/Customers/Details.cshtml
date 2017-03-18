@@ -10,8 +10,19 @@
 
 <ul>
     <li>Membership Type: @Model.MembershipType.Name</li>
-    <li>Date of Birth: @Model.DOB</li>
+    @if (Model.DOB == null)
+    {
+        
+    }
+    else
+    {
+        <li>Date of Birth: @Model.DOB</li>
+    }
+
 </ul>
+
+
+
     
 
 
